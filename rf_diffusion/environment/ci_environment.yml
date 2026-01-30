@@ -1,13 +1,21 @@
-name: RFDpoly_env_ci
+name: RFDpoly_env_ci_test
 channels:
   - pytorch
   - pyg
-  - dglteam/label/cu117
-  - nvidia
+  - dglteam
   - conda-forge
   - bioconda
   - defaults
 dependencies:
+  - python=3.10.8
+  - pip=23.0.1
+  - pytorch=1.13.1
+  - cpuonly
+  - pyg=2.2.0
+  - pytorch-scatter=2.1.0
+  - pytorch-sparse=0.6.16
+  - pytorch-cluster=1.6.0
+  - dgl=1.0.1
   - _libgcc_mutex=0.1
   - _openmp_mutex=4.5
   - anyio=3.5.0
@@ -38,44 +46,11 @@ dependencies:
   - conda-package-streaming=0.7.0
   - contourpy=1.0.5
   - cryptography=39.0.1
-  - cuda=11.7.1
-  - cuda-cccl=11.7.91
-  - cuda-command-line-tools=11.7.1
-  - cuda-compiler=11.7.1
-  - cuda-cudart=11.7.99
-  - cuda-cudart-dev=11.7.99
-  - cuda-cuobjdump=11.7.91
-  - cuda-cupti=11.7.101
-  - cuda-cuxxfilt=11.7.91
-  - cuda-demo-suite=12.1.55
-  - cuda-documentation=12.1.55
-  - cuda-driver-dev=11.7.99
-  - cuda-gdb=12.1.55
-  - cuda-libraries=11.7.1
-  - cuda-libraries-dev=11.7.1
-  - cuda-memcheck=11.8.86
-  - cuda-nsight=12.1.55
-  - cuda-nsight-compute=12.1.0
-  - cuda-nvcc=11.7.99
-  - cuda-nvdisasm=12.1.55
-  - cuda-nvml-dev=11.7.91
-  - cuda-nvprof=12.1.55
-  - cuda-nvprune=11.7.91
-  - cuda-nvrtc=11.7.99
-  - cuda-nvrtc-dev=11.7.99
-  - cuda-nvtx=11.7.91
-  - cuda-nvvp=12.1.55
-  - cuda-runtime=11.7.1
-  - cuda-sanitizer-api=12.1.55
-  - cuda-toolkit=11.7.1
-  - cuda-tools=11.7.1
-  - cuda-visual-tools=11.7.1
   - cycler=0.11.0
   - dbus=1.13.18
   - debugpy=1.5.1
   - decorator=5.1.1
   - defusedxml=0.7.1
-  - dgl=1.0.1.cu117
   - entrypoints=0.4
   - executing=0.8.3
   - expat=2.4.9
@@ -83,7 +58,6 @@ dependencies:
   - fontconfig=2.14.1
   - fonttools=4.25.0
   - freetype=2.12.1
-  - gds-tools=1.6.0.25
   - giflib=5.2.1
   - glib=2.69.1
   - gst-plugins-base=1.14.1
@@ -115,18 +89,6 @@ dependencies:
   - libbrotlidec=1.0.9
   - libbrotlienc=1.0.9
   - libclang=10.0.1
-  - libcublas=11.10.3.66
-  - libcublas-dev=11.10.3.66
-  - libcufft=10.7.2.124
-  - libcufft-dev=10.7.2.124
-  - libcufile=1.6.0.25
-  - libcufile-dev=1.6.0.25
-  - libcurand=10.3.2.56
-  - libcurand-dev=10.3.2.56
-  - libcusolver=11.4.0.1
-  - libcusolver-dev=11.4.0.1
-  - libcusparse=11.7.4.91
-  - libcusparse-dev=11.7.4.91
   - libdeflate=1.17
   - libedit=3.1.20221030
   - libevent=2.1.12
@@ -136,10 +98,6 @@ dependencies:
   - libgfortran5=11.2.0
   - libiconv=1.17
   - libllvm10=10.0.1
-  - libnpp=11.7.4.75
-  - libnpp-dev=11.7.4.75
-  - libnvjpeg=11.8.0.2
-  - libnvjpeg-dev=11.8.0.2
   - libpng=1.6.39
   - libpq=12.9
   - libsodium=1.0.18
@@ -175,7 +133,6 @@ dependencies:
   - networkx=2.8.4
   - notebook=6.5.2
   - notebook-shim=0.2.2
-  - nsight-compute=2023.1.0.15
   - nspr=4.33
   - nss=3.74
   - numexpr=2.8.4
@@ -211,16 +168,9 @@ dependencies:
   - pyqt=5.15.7
   - pyrsistent=0.18.0
   - pysocks=1.7.1
-  - python=3.10.8
   - python-dateutil=2.8.2
   - python-fastjsonschema=2.16.2
   - python_abi=3.10
-  - pytorch=1.13.1
-  - pytorch-cluster=1.6.0
-  - pytorch-cuda=11.7
-  - pytorch-mutex=1.0
-  - pytorch-scatter=2.1.0
-  - pytorch-sparse=0.6.16
   - pytz=2022.7
   - pyzmq=23.2.0
   - qt-main=5.15.2
