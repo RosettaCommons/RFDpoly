@@ -178,13 +178,13 @@ def get_basis(relative_pos: Tensor,
               compute_gradients: bool = False,
               use_pad_trick: bool = False,
               amp: bool = False) -> Dict[str, Tensor]:
-    with nvtx_range('spherical harmonics'):
+    with safe_nvtx_range('spherical harmonics'):
         spherical_harmonics = get_spherical_harmonics(relative_pos, max_degree)
-    with nvtx_range('CB coefficients'):
+    with safe_nvtx_range('CB coefficients'):
         clebsch_gordon = get_all_clebsch_gordon(max_degree, relative_pos.device)
 
     with torch.autograd.set_grad_enabled(compute_gradients):
-        with nvtx_range('bases'):
+        with safe_nvtx_range('bases'):
             basis = get_basis_script(max_degree=max_degree,
                                      use_pad_trick=use_pad_trick,
                                      spherical_harmonics=spherical_harmonics,
