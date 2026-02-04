@@ -684,6 +684,7 @@ class Sampler:
 
         is_partial = self.diffuser_conf.partial_T is not None
         indep, is_diffused = self.model_adaptor.insert_contig(indep, self.contig_map, partial_T=is_partial, seq_spec=self.seq_spec_list) 
+        seq_orig = indep.seq.clone()
 
         # create a residue mask based on polymer type:
         # I think we want this to be on the gpu
@@ -902,7 +903,10 @@ class Sampler:
                 # seq_t[visible] = seq_orig[visible]
                 # assert 0, 'NEED TO MODIFY TO INCLUDE NA TOKENS!'
                 # indep.seq = torch.full_like(indep.seq, 20)
-                indep.seq = torch.full_like(indep.seq, 31)
+                if self.inf_conf.keep_input_seq_partial:
+                    indep.seq = seq_orig
+                else:
+                    indep.seq = torch.full_like(indep.seq, 31)
         else:
             # Sequence diffusion
             visible = ~is_diffused
