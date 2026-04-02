@@ -53,3 +53,8 @@ html_theme_options = {
         "color-brand-visited": "#37939B",
         }
     }
+
+# Add external JS files
+html_js_files = [
+    "https://scripts.simpleanalyticscdn.com/latest.js",
+]

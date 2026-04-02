@@ -1,0 +1,4 @@
+# ignore the docs build directory
+docs/build
+docs/build/*
+docs/build/html/*

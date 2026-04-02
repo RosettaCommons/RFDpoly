@@ -4,4 +4,8 @@
   {{ super() }}
   <!-- 100% privacy-first analytics -->
   <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+{% block extrafooter %}
+  {{ super() }}
+  <div id="test-footer">FOOTER WORKS</div>
 {% endblock %}
