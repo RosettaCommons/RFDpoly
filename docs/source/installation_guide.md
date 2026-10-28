@@ -25,6 +25,9 @@ inference.input_pdb=/path/to/RFDpoly/rf_diffusion/test_data/DBP035.pdb
 
 ## Creating a Conda Environment
 
+> **Note:** Use pip 26.2.2 or newer. Older pip releases still trust the withdrawn emSign root CA certificate,
+> so upgrade pip in the new environment before running `pip install`, as shown below.
+
 ### Linux: 
 If the apptainer image is not compatible with your system
 or you are doing development with RFDpoly, you can create
@@ -33,6 +36,7 @@ a [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage
 ```bash
 conda env create -f /path/to/RFDpoly/rf_diffusion/environment/environment.yml
 conda activate RFDpoly_env
+python -m pip install --upgrade pip  # pip 26.2.2 or newer
 pip install /path/to/RFDpoly/rf_diffusion/RF2-allatom/rf2aa/SE3Transformer
 ```
 The last command installs a slightly modified version of 
@@ -66,6 +70,7 @@ a [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage
 ```bash
 conda env create -f /path/to/RFDpoly/rf_diffusion/environment/macos_environment.yml
 conda activate RFDpoly_env
+python -m pip install --upgrade pip  # pip 26.2.2 or newer
 pip install /path/to/RFDpoly/rf_diffusion/RF2-allatom/rf2aa/SE3Transformer
 ```
 The last command installs a slightly modified version of 
