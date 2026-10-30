@@ -57,4 +57,9 @@ html_theme_options = {
 # Add external JS files
 html_js_files = [
     "https://scripts.simpleanalyticscdn.com/latest.js",
+    "page_feedback.js",
+]
+
+html_css_files = [
+    "page_feedback.css",
 ]
