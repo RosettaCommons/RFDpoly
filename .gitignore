@@ -3,3 +3,4 @@ docs/build
 docs/build/*
 docs/build/html/*
 .devcontainer/
+.DS_Store
