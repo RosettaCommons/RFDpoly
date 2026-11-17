@@ -15,6 +15,17 @@ This repository contains the code for the [associated preprint](https://www.bior
 ## Documentation
 More information and documentation can be found [here](https://rosettacommons.github.io/RFDpoly/).
 
+## Tutorials
+Interactive Colab notebooks let you try RFDpoly without installing anything locally:
+
+| Notebook | What it covers | |
+| --- | --- | --- |
+| **Demo 1: general design** | Polymer-class contigs, sequence–structure codesign, nucleic acid secondary structure conditioning, and motif scaffolding of DNA-binding proteins | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/RosettaCommons/RFDpoly/blob/main/tutorials/demo01_general_design.ipynb) |
+| **Demo 2: ensemble modeling** | Partial diffusion for conformational ensembles, and multi-state sequence design with tied NA-MPNN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/RosettaCommons/RFDpoly/blob/main/tutorials/demo02_ensemble_modeling.ipynb) |
+
+See [`tutorials/`](tutorials/) for more detail. A GPU runtime is recommended, and the
+setup cell that downloads the container takes a while.
+
 ## Installation and setup
 
 ### 1. Clone the repository 

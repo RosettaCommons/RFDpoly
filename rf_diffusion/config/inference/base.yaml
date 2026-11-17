@@ -72,6 +72,7 @@ inference:
   num_atoms_modeled: 23
   num_atoms_saved: 23
   save_rna_oneletter: False
+  keep_input_seq_partial: False
   set_diffused_prot_to: null
   set_diffused_dna_to: null
   set_diffused_rna_to: null
